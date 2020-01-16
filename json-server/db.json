@@ -1,0 +1,11 @@
+{
+    "lembretes": [
+        {"id":1, "prioridade": "alta", "titulo": "Teste", "texto": "teste123"},
+        {"id":2, "prioridade": "media", "titulo": "Teste média", "texto": "Testando prioridades"},
+        {"id":3, "prioridade": "baixa", "titulo": "Teste baixa", "texto": "Testando prioridades"},
+        {"id":4, "prioridade": "media", "titulo": "Testando", "texto": "testando123"},
+        {"id":5, "prioridade": "baixa", "titulo": "Usar JSON server", "texto": "Dados em JSON server"},
+        {"id":6, "prioridade": "alta", "titulo": "Fazer o teste", "texto": "Vamos codar"},
+        {"id":7, "prioridade": "alta", "titulo": "Usar RxJS", "texto": "RxJS é seu amigo"}
+    ]
+}
