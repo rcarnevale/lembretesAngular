@@ -4,7 +4,7 @@ import { HttpClientModule } from "@angular/common/http";
 
 import { LembreteModule } from "./lembrete/lembrete.module";
 import { LembreteListModule } from "./lembrete-list/lembrete-list.module";
-import { LembreteFormModule } from "./lembrete-form/lembrete-form.module";
+
 
 
 
@@ -14,8 +14,7 @@ import { LembreteFormModule } from "./lembrete-form/lembrete-form.module";
         HttpClientModule,
         CommonModule,
         LembreteModule,
-        LembreteListModule,
-        LembreteFormModule
+        LembreteListModule
     ]
 })
 export class LembretesModule {
