@@ -12,22 +12,20 @@
         <div class="form-group" >
             <label for="titulo">Título: </label>
             <input type="text" class="form-control" id="titulo" name="titulo"
-            [(ngModel)]="editModal.titulo" required>
+            [(ngModel)]="titulo" required>
         </div>
 
         <div class="form-group">
           <label for="prioridade">Prioridade: </label>
-          <select name="prioridade" class="form-control" id="prioridade" [(ngModel)]="editModal.prioridade" required>
-            <option value="{{editModal.prioridade.value}}">{{editModal.prioridade}}</option> 
-          </select>
+          <input type="text" class="form-control" id="prioridade" name="prioridade"
+            [(ngModel)]="prioridade" required>
         </div>
         
         <div class="form-group">
           <label for="lembrete">Lembrete: </label>
-          <textarea id="lembrete" class="form-control" name="lembrete" rows="5" cols="33"
-          [(ngModel)]="editModal.texto" required>
-        
-        </textarea>
+          <textarea type="text" id="lembrete" class="form-control" name="lembrete" rows="5" cols="33"
+          [(ngModel)]="texto" required>
+          </textarea>
         </div>
         
         <button type="button" class="btn btn-primary" 
