@@ -10,30 +10,9 @@
                     (keyup) = "debounce.next($event.target.value)">
             </form>
         </div>
-        
-        
+        <lembrete-modal class="col-sm" (formParaList)='lembretesOfLembreteListComponent'></lembrete-modal>
     </div>
   </div>
-
-<form method="post" #frm="ngForm" (ngSubmit)="save(frm)">
-    <label for="titulo">Título:</label>
-    <input type="text" id="titulo" name="titulo"
-    [(ngModel)]="formOfLembreteListComponent.titulo" required>
-  
-    <select name="prioridade" [(ngModel)]="formOfLembreteListComponent.prioridade" required>
-      <option value="Alta">Alta</option> 
-      <option value="Média" selected>Média</option>
-      <option value="Baixa">Baixa</option>
-    </select>
-  
-    <label for="lembrete">Lembrete:</label>
-    <textarea id="lembrete" name="lembrete" rows="5" cols="33"
-    [(ngModel)]="formOfLembreteListComponent.texto" required>
-  
-    </textarea>
-  
-    <button type="submit" class="btn btn-primary" id="salvar" [disabled]="frm.invalid">Salvar</button>
-  </form>
 
 <ap-lembretes 
     [lembretesOfLembretesComponent]='lembretesOfLembreteListComponent | filterByDescription: filter'>

@@ -1,0 +1,46 @@
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Adicione seu lembrete</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <div class="modal-body">  
+      <form method="post" #frm="ngForm" (ngSubmit)="save(frm)">
+
+        <div class="form-group">
+            <label for="titulo">Título: </label>
+            <input type="text" class="form-control" id="titulo" name="titulo"
+            [(ngModel)]="formModal.titulo" required>
+        </div>
+
+        <div class="form-group">
+          <label for="prioridade">Prioridade: </label>
+          <select name="prioridade" class="form-control" id="prioridade" [(ngModel)]="formModal.prioridade" required>
+            <option value="Alta">Alta</option> 
+            <option value="Média" selected>Média</option>
+            <option value="Baixa">Baixa</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="lembrete">Lembrete: </label>
+          <textarea id="lembrete" class="form-control" name="lembrete" rows="5" cols="33"
+          [(ngModel)]="formModal.texto" required>
+        
+        </textarea>
+        </div>
+        
+        <button type="button" class="btn btn-primary" 
+        id="salvar" [disabled]="frm.invalid" 
+        (click)="c('Save click')" (click)="save(frm)">Salvar</button>
+        
+      </form>
+    </div>
+    <div class="modal-footer">
+  
+    </div>
+  </ng-template>
+  
+  <button class="btn btn-primary" (click)="open(content)">Adicionar Lembrete</button>
