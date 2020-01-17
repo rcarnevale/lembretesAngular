@@ -43,16 +43,16 @@
       "texto": "testar o bootstrap"
     },
     {
+      "id": 8,
       "titulo": "Testando",
       "prioridade": "Alta",
-      "texto": "Testando Form",
-      "id": 8
+      "texto": "Testando Form Edit"
     },
     {
       "id": 9,
-      "titulo": "Testando Cor da Borda",
+      "titulo": "Testando Cor",
       "prioridade": "Baixa",
-      "texto": "Teste da cor borda"
+      "texto": "Testando a cor da borda"
     }
   ]
 }
