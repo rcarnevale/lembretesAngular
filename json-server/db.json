@@ -49,10 +49,10 @@
       "id": 8
     },
     {
+      "id": 9,
       "titulo": "Testando Cor da Borda",
       "prioridade": "Baixa",
-      "texto": "Teste da cor",
-      "id": 9
+      "texto": "Teste da cor borda"
     }
   ]
 }

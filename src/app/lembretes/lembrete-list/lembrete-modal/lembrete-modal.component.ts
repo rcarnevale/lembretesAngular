@@ -5,7 +5,6 @@ import { LembreteService } from '../../lembrete/lembrete.service';
 import { Lembrete } from '../../lembrete/lembrete';
 import { LembreteListComponent } from '../lembrete-list.component';
 
-//Modal do Adicionar
 @Component({
   selector: 'lembrete-modal',
   templateUrl: './lembrete-modal.component.html',

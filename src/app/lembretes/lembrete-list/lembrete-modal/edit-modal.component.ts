@@ -10,32 +10,45 @@ import { LembreteListComponent } from '../lembrete-list.component';
     templateUrl: './edit-modal.component.html',
     // add NgbModalConfig and NgbModal to the component providers
     providers: [NgbModal]
-  })
-  export class EditModalComponent implements OnInit {
-  
-    editModal: any;
-    @Input() formParaList = [];
-  
+})
+export class EditModalComponent implements OnInit {
+
+
+    editForm: any;
+
+    @Input() id :number;
+    @Input() titulo ='';
+    @Input() prioridade ='';
+    @Input() texto = '';
+
     constructor(
-      private modalService: NgbModal, 
-      private lembreteService: LembreteService,
-      private lembreteList: LembreteListComponent
-      ) {
+        private modalService: NgbModal, 
+        private lembreteService: LembreteService,
+        private lembreteList: LembreteListComponent
+        ) {
     }
-  
+
     ngOnInit(){
-      this.editModal = {};
+        this.editForm = {};
     }
-  
+
     open(contentedit) {
-      this.modalService.open(contentedit);
+        this.modalService.open(contentedit);
+        
     }
-  
+
     edit(){
-      this.lembreteService
-        .editLembrete(this.editModal)
+        this.editForm = {
+            id:this.id,
+            titulo:this.titulo,
+            prioridade: this.prioridade,
+            texto: this.texto
+        }
+        
+        this.lembreteService
+        .editLembrete(this.editForm)
         .subscribe((lembrete:Lembrete[]) =>
         this.lembreteList.atualiza(lembrete))
-      this.editModal = {};
-    }
-  }
+        this.editForm = {};
+}
+}
