@@ -8,6 +8,7 @@ import { LembretesComponent } from "./lembretes/lembretes.component";
 import { LembreteListComponent } from "./lembrete-list.component";
 import { filterByDescription } from "./filterByDescription.pipe";
 import { LembreteModule } from "../lembrete/lembrete.module";
+import { LembreteModal } from "./lembrete-modal/lembrete-modal.component";
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { LembreteModule } from "../lembrete/lembrete.module";
         LembreteListComponent,
         LembretesComponent,
         LoadButtonComponent,
-        filterByDescription
+        filterByDescription,
+        LembreteModal
     ],
     imports:[
         CommonModule,

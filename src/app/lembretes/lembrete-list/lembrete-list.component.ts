@@ -5,7 +5,7 @@ import { debounceTime } from 'rxjs/operators';
 
 import { Lembrete } from '../lembrete/lembrete';
 import { LembreteService } from '../lembrete/lembrete.service';
-import { FormGroup } from '@angular/forms';
+
 
 @Component({
   selector: 'app-lembrete-list',
@@ -28,9 +28,7 @@ export class LembreteListComponent implements OnInit, OnDestroy {
   constructor(
     private activatedRoute: ActivatedRoute,
     private lembreteService: LembreteService
-    ) {
-
-  }
+    ) {}
   
   ngOnInit(): void {
     this.formOfLembreteListComponent = {};
@@ -54,15 +52,12 @@ export class LembreteListComponent implements OnInit, OnDestroy {
       });
   }
 
-  save(frm: FormGroup){
-    this.lembreteService
-      .sendLembrete(this.formOfLembreteListComponent)
-      .subscribe((lembretes:Lembrete[]) => {
-        this.lembretesOfLembreteListComponent = this.activatedRoute.snapshot.data.lembretes.concat(lembretes);
-        this.lembretesOfLembreteListComponent.reverse();
-      
-
-    frm.reset();
-    })
+  atualiza(lembrete:Lembrete[]) {
+    this.lembretesOfLembreteListComponent =
+      this.activatedRoute.snapshot.data.lembretes
+      .concat(lembrete)
+      .reverse();
   }
+
+  
 }

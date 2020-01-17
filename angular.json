@@ -27,10 +27,7 @@
               "./node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": [
-              "./node_modules/jquery/dist/jquery.js",
-              "./node_modules/@popperjs/core/src/popper.js",
-              "./node_modules/bootstrap/js/dist/index.js",
-              "./node_modules/bootstrap/js/dist/modal.js"
+              
             ]
           },
           "configurations": {
