@@ -1,0 +1,44 @@
+<ng-template #contentedit let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Edite seu lembrete</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <div class="modal-body">  
+      <form method="put">
+
+        <div class="form-group" >
+            <label for="titulo">Título: </label>
+            <input type="text" class="form-control" id="titulo" name="titulo"
+            [(ngModel)]="editModal.titulo" required>
+        </div>
+
+        <div class="form-group">
+          <label for="prioridade">Prioridade: </label>
+          <select name="prioridade" class="form-control" id="prioridade" [(ngModel)]="editModal.prioridade" required>
+            <option value="{{editModal.prioridade.value}}">{{editModal.prioridade}}</option> 
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="lembrete">Lembrete: </label>
+          <textarea id="lembrete" class="form-control" name="lembrete" rows="5" cols="33"
+          [(ngModel)]="editModal.texto" required>
+        
+        </textarea>
+        </div>
+        
+        <button type="button" class="btn btn-primary" 
+        id="salvar" [disabled]="frm.invalid" 
+        (click)="c('Save click')" (click)="edit()">Salvar</button>
+        
+      </form>
+    </div>
+    <div class="modal-footer">
+  
+    </div>
+  </ng-template>
+  
+  <button class="btn btn-primary btn-sm" (click)="open(contentedit)">Editar</button>

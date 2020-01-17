@@ -14,15 +14,24 @@ export class LembreteService {
         return this.http.post(`${API}/lembretes`, lembrete);
     }
 
-    
-
     listFromUserPaginated(page: number){
 
         const parametro = new HttpParams()
             .append('_page', page.toString());
 
         return this.http
-            .get<Lembrete[]>(`${API}/lembretes/?_limit=3&`, {params:parametro});
+            .get<Lembrete[]>(`${API}/lembretes/?_sort=id&_order=desc&_limit=3&`, {params:parametro});
 
+    }
+
+    deleteLembrete(id:number){
+
+        console.log(id)
+        return this.http.delete(`${API}/lembretes/${id}`);
+    }
+
+    editLembrete(lembrete){
+
+        return this.http.put(`${API}/lembretes/${lembrete.id}`, lembrete)
     }
 }

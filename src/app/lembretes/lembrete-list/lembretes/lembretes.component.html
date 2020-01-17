@@ -11,6 +11,7 @@
                 'border-warning': lembrete.prioridade == 'Média', 
                 'border-success': lembrete.prioridade == 'Baixa'}">
       <ap-lembrete 
+          [id]="lembrete.id"
           [titulo]="lembrete.titulo" 
           [prioridade]="lembrete.prioridade"
           [texto]="lembrete.texto">

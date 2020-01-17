@@ -53,10 +53,8 @@ export class LembreteListComponent implements OnInit, OnDestroy {
   }
 
   atualiza(lembrete:Lembrete[]) {
-    this.lembretesOfLembreteListComponent =
-      this.activatedRoute.snapshot.data.lembretes
-      .concat(lembrete)
-      .reverse();
+    this.lembreteService.listFromUserPaginated(this.currentPage)
+    .subscribe(lembretes => this.lembretesOfLembreteListComponent = lembretes);
   }
 
   

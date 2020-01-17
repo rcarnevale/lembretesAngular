@@ -8,7 +8,7 @@ import { LembretesComponent } from "./lembretes/lembretes.component";
 import { LembreteListComponent } from "./lembrete-list.component";
 import { filterByDescription } from "./filterByDescription.pipe";
 import { LembreteModule } from "../lembrete/lembrete.module";
-import { LembreteModal } from "./lembrete-modal/lembrete-modal.component";
+import { LembreteModalModule } from "./lembrete-modal/lembrete-modal.module";
 
 
 @NgModule({
@@ -16,14 +16,14 @@ import { LembreteModal } from "./lembrete-modal/lembrete-modal.component";
         LembreteListComponent,
         LembretesComponent,
         LoadButtonComponent,
-        filterByDescription,
-        LembreteModal
+        filterByDescription
     ],
     imports:[
         CommonModule,
         LembreteModule,
         FormsModule,
-        NgbModule
+        NgbModule,
+        LembreteModalModule
         
     ]
 })
