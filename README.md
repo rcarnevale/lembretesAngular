@@ -1,27 +1,45 @@
 # Lembretes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
+Este projeto foi desenvolvido como teste para uma vaga de desenvolvedor júnior.
 
-## Development server
+O projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) na versão 6.0.7.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Dependências
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para instalar as dependências devemos começar com o Angular CLI através do comando:
 
-## Build
+```
+npm install -g @angular/cli@6.0.7
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Utilizaremos o JSON-server como servidor local para testes, portanto devemos executar o comando:
 
-## Running unit tests
+```
+npm install -g json-server
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Através do terminal, devemos acessar a pasta json-server, contida na raiz do projeto, e executar o comando:
 
-## Running end-to-end tests
+```
+json-server --watch db.json
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Finalmente, na pasta raiz temos de executar:
 
-## Further help
+```
+ng serve --open
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+O projeto abrirá em uma aba de seu navegador.
+
+
+## Problemas conhecidos
+
+Eventualmente, o projeto acusará erro na dependência rxjs, se isso ocorrer, execute o seguinte comando na pasta raiz:
+
+```
+npm install rxjs@6.0.0 --save
+```
+
+Também é conhecido um bug na abertura do modal do edit.
