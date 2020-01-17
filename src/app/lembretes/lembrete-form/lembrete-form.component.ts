@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'ap-lembrete-form',
   templateUrl: './lembrete-form.component.html',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LembreteFormComponent implements OnInit {
 
+  
+
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }
+

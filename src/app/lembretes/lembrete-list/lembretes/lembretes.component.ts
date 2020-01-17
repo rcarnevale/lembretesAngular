@@ -23,8 +23,10 @@ export class LembretesComponent implements OnChanges {
   groupColumns(lembretes: Lembrete[]){
     const newRows = [];
 
+    console.log(lembretes);
     for(let i=0; i<lembretes.length; i+=3){
-      newRows.push(lembretes.slice(i, i+=3));
+      newRows.push(lembretes.slice(i, i+3));
+      console.log(newRows);
     }
 
     return newRows;

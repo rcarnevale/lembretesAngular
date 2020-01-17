@@ -1,11 +1,58 @@
 {
-    "lembretes": [
-        {"id":1, "prioridade": "alta", "titulo": "Teste", "texto": "teste123"},
-        {"id":2, "prioridade": "media", "titulo": "Teste média", "texto": "Testando prioridades"},
-        {"id":3, "prioridade": "baixa", "titulo": "Teste baixa", "texto": "Testando prioridades"},
-        {"id":4, "prioridade": "media", "titulo": "Testando", "texto": "testando123"},
-        {"id":5, "prioridade": "baixa", "titulo": "Usar JSON server", "texto": "Dados em JSON server"},
-        {"id":6, "prioridade": "alta", "titulo": "Fazer o teste", "texto": "Vamos codar"},
-        {"id":7, "prioridade": "alta", "titulo": "Usar RxJS", "texto": "RxJS é seu amigo"}
-    ]
+  "lembretes": [
+    {
+      "id": 1,
+      "prioridade": "Alta",
+      "titulo": "Teste",
+      "texto": "teste123"
+    },
+    {
+      "id": 2,
+      "prioridade": "Média",
+      "titulo": "Teste média",
+      "texto": "Testando prioridades"
+    },
+    {
+      "id": 3,
+      "prioridade": "Baixa",
+      "titulo": "Teste Baixa",
+      "texto": "Testando prioridades"
+    },
+    {
+      "id": 4,
+      "prioridade": "Baixa",
+      "titulo": "Usar JSON server",
+      "texto": "Dados em JSON server"
+    },
+    {
+      "id": 5,
+      "prioridade": "Alta",
+      "titulo": "Fazer o teste",
+      "texto": "Vamos codar"
+    },
+    {
+      "id": 6,
+      "prioridade": "Alta",
+      "titulo": "Usar RxJS",
+      "texto": "RxJS é seu amigo"
+    },
+    {
+      "id": 7,
+      "prioridade": "Média",
+      "titulo": "Fazer o teste",
+      "texto": "testar o bootstrap"
+    },
+    {
+      "titulo": "Testando",
+      "prioridade": "Alta",
+      "texto": "Testando Form",
+      "id": 8
+    },
+    {
+      "titulo": "Testando Cor da Borda",
+      "prioridade": "Alta",
+      "texto": "Teste da cor",
+      "id": 9
+    }
+  ]
 }

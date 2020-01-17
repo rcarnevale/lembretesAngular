@@ -9,12 +9,12 @@ export class LembreteService {
 
     constructor(private http: HttpClient){}
 
-    listFromUser(){
+    sendLembrete(lembrete:any){
 
-        return this.http
-            .get<Lembrete[]>(`${API}/lembretes`);
-
+        return this.http.post(`${API}/lembretes`, lembrete);
     }
+
+    
 
     listFromUserPaginated(page: number){
 

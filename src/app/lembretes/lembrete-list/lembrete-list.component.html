@@ -1,13 +1,39 @@
-<div class="text-center mt-3 mb-3">
-    <form>
-        <input
-            class="rounded"
-            type="search"
-            placeholder=" search..."
-            autofocus 
-            (keyup) = "debounce.next($event.target.value)">
-    </form>
-</div>
+<div class="m-3 container">
+    <div class="row text-center">
+        <div class="col-sm">
+            <form>
+                <input
+                    class="rounded"
+                    type="search"
+                    placeholder=" Busque seu lembrete"
+                    autofocus 
+                    (keyup) = "debounce.next($event.target.value)">
+            </form>
+        </div>
+        
+        
+    </div>
+  </div>
+
+<form method="post" #frm="ngForm" (ngSubmit)="save(frm)">
+    <label for="titulo">Título:</label>
+    <input type="text" id="titulo" name="titulo"
+    [(ngModel)]="formOfLembreteListComponent.titulo" required>
+  
+    <select name="prioridade" [(ngModel)]="formOfLembreteListComponent.prioridade" required>
+      <option value="Alta">Alta</option> 
+      <option value="Média" selected>Média</option>
+      <option value="Baixa">Baixa</option>
+    </select>
+  
+    <label for="lembrete">Lembrete:</label>
+    <textarea id="lembrete" name="lembrete" rows="5" cols="33"
+    [(ngModel)]="formOfLembreteListComponent.texto" required>
+  
+    </textarea>
+  
+    <button type="submit" class="btn btn-primary" id="salvar" [disabled]="frm.invalid">Salvar</button>
+  </form>
 
 <ap-lembretes 
     [lembretesOfLembretesComponent]='lembretesOfLembreteListComponent | filterByDescription: filter'>
