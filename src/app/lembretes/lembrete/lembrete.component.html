@@ -2,7 +2,6 @@
     <h3>{{titulo}}</h3>
     <p>Prioridade: {{prioridade}}</p>
     <p label="Lembrete:">{{texto}}</p>
-    <button type="button" class="btn btn-default">
-        <span class="glyphicon glyphicon-pencil">Deletar</span>
-    </button>
+    <edit-modal></edit-modal>
+    <button type="button" id="deletar" class="btn btn-danger btn-sm" (click)="delete()">Deletar</button>
 </div>

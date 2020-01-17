@@ -50,7 +50,7 @@
     },
     {
       "titulo": "Testando Cor da Borda",
-      "prioridade": "Alta",
+      "prioridade": "Baixa",
       "texto": "Teste da cor",
       "id": 9
     }
