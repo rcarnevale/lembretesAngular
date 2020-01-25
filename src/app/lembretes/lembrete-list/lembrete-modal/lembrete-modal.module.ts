@@ -14,12 +14,13 @@ import { EditModalComponent } from "./edit-modal.component";
     ],
     imports: [
         CommonModule,
-        FormsModule
+        FormsModule,
+        NgbModule
     ],
     exports:[
         LembreteModalComponent,
-        EditModalComponent,
-        NgbModule
+        EditModalComponent
+        
     ]
 
 
