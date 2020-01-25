@@ -1,21 +1,22 @@
-<p class='text-left text-muted' *ngIf='!lembretesOfLembretesComponent.length'>
+<p class='text-lg-center text-muted' *ngIf='!lembretesOfLembretesComponent.length'>
   Não encontramos nenhum lembrete. :(
 </p>
 
 <ol class='list-unstyled'>
   <li *ngFor="let cols of rowsOfLembretesComponent" class='row'>
     <div 
-    class="col-4 border text-center" 
-    *ngFor="let lembrete of cols" 
-    [ngClass]="{'border-danger': lembrete.prioridade == 'Alta', 
-                'border-warning': lembrete.prioridade == 'Média', 
-                'border-success': lembrete.prioridade == 'Baixa'}">
-      <ap-lembrete 
-          [id]="lembrete.id"
-          [titulo]="lembrete.titulo" 
-          [prioridade]="lembrete.prioridade"
-          [texto]="lembrete.texto">
-      </ap-lembrete>
+    class="col-4 text-center" 
+    *ngFor="let lembrete of cols" >
+      <div class= 'border m-3' [ngClass]="{'border-danger': lembrete.prioridade == 'Alta', 
+      'border-warning': lembrete.prioridade == 'Média', 
+      'border-success': lembrete.prioridade == 'Baixa'}">
+        <ap-lembrete 
+            [id]="lembrete.id"
+            [titulo]="lembrete.titulo" 
+            [prioridade]="lembrete.prioridade"
+            [texto]="lembrete.texto">
+        </ap-lembrete>
+      </div>
     </div>
   </li>
 

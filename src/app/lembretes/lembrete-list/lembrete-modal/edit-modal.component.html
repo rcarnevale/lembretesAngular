@@ -1,4 +1,4 @@
-<ng-template #contentedit let-c="close" let-d="dismiss">
+<ng-template #content let-c="close" let-d="dismiss">
     <div class="modal-header">
       <h4 class="modal-title" id="modal-basic-title">Edite seu lembrete</h4>
       <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
@@ -37,6 +37,6 @@
     <div class="modal-footer">
   
     </div>
-  </ng-template>
+</ng-template>
   
-  <button class="btn btn-primary btn-sm" (click)="open(contentedit)">Editar</button>
+<button class="btn btn-primary btn-sm" (click)="open(content)">Editar</button>

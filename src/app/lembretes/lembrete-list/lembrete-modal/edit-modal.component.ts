@@ -32,8 +32,8 @@ export class EditModalComponent implements OnInit {
         this.editForm = {};
     }
 
-    open(contentedit) {
-        this.modalService.open(contentedit);
+    open(content) {
+        this.modalService.open(content);
         
     }
 
