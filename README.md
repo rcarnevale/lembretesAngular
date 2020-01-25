@@ -1,9 +1,11 @@
 #Lembretes
+
 Este projeto foi desenvolvido como teste para uma vaga de desenvolvedor júnior.
 
 O projeto foi gerado com Angular CLI na versão 6.0.7.
 
 #Dependências
+
 Para instalar as dependências devemos começar com o Angular CLI através do comando:
 
 ````
@@ -31,6 +33,7 @@ ng serve --open
 O projeto abrirá em uma aba de seu navegador.
 
 #Problemas conhecidos
+
 Eventualmente, o projeto acusará erro na dependência rxjs, se isso ocorrer, execute o seguinte comando na pasta raiz:
 
 ````
